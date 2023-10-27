@@ -5,7 +5,7 @@ import queue
 
 dataset = pd.read_csv("Solar.csv")
 x = dataset.iloc[:,2:]
-kmeans = KMeans(n_clusters = 6)
+kmeans = KMeans(n_clusters = 3)
 kmeans.fit(x)
 ymeans = kmeans.predict(x)
 def optimize(userid):
