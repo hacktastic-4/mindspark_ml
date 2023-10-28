@@ -5,11 +5,12 @@ from sklearn.ensemble import RandomForestRegressor
 
 #Load the dataset and create the RandomForestRegressor
 dataset = pd.read_csv('Solar.csv')
-X = dataset.iloc[:, [2,3,4,5,6,7,8,11,12,13]].values
+X = dataset.iloc[:, [2,3,4,6,7,8,11,12,13]].values
 y = dataset.iloc[:, -1].values
 regressor = RandomForestRegressor(n_estimators=10, random_state=0)
 regressor.fit(X, y)
-
+  
+  
 def predict(attri):
     print("into int")
     attri = attri[1:-1]
