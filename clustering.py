@@ -8,8 +8,8 @@ x = dataset.iloc[:,2:]
 kmeans = KMeans(n_clusters = 3)
 kmeans.fit(x)
 ymeans = kmeans.predict(x)
+
 def optimize(userid):
-    
     user_id = int(userid)-1
     pre = x.iloc[user_id,:].values
     req_clus = kmeans.predict([pre])
