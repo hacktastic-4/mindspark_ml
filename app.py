@@ -39,11 +39,12 @@ def optimize_endpoint(userid):
         }
         return jsonify(response)
 
-@app.route('/ml/forecast/')
+@app.route('/ml/forecast/<attributes>')
 @cross_origin()
-def forecast_endpoint():
+def forecast_endpoint(attributes):
     response = request.args.to_dict()
-    attribute_list = response["attributes"]
+    # attribute_list = response["attributes"]
+    attribute_list = attributes
     try:
         res = predict(attribute_list)
         response = {
