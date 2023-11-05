@@ -3,5 +3,3 @@ Flask-RESTful
 scikit-learn
 pandas
 numpy
-queue 
-matplotlib
