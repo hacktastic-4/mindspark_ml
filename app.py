@@ -4,7 +4,6 @@ from forecast import predict
 
 app = Flask(__name__)
 
-
 @app.route('/ml/')
 def mlpage():
     response = '''
@@ -15,7 +14,6 @@ def mlpage():
     4. pattern/
     '''
     return response
-
 
 @app.route('/ml/optimize/<userid>')
 def optimize_endpoint(userid):
@@ -55,10 +53,6 @@ def forecast_endpoint():
             "response" : 112276,
             "status" : 200
         }
-        print()
-        print(e)
-        print()
-
         return jsonify(response)
 
 if __name__ == '__main__':
