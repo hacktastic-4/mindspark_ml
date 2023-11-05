@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 from clustering import optimize
 from forecast import predict
+from flask_cors import CORS
 
 app = Flask(__name__)
+cors = CORS(app)
 
 @app.route('/ml/')
 def mlpage():
